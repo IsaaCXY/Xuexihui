@@ -1,9 +1,9 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:colorPrimaryDark">#1976D2</item>
-        <item name="android:colorPrimary">#2196F3</item>
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:colorPrimaryDark">#1976D2</item>-->
+        <!--<item name="android:colorPrimary">#2196F3</item>-->
         <!--<item name="android:textColor">#FFFFFF</item>-->
         <item name="colorControlNormal">#FFFFFF</item>
         <!--<item name="android:textColorPrimary">@color/MainTitleColor</item>-->

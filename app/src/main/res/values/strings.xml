@@ -19,4 +19,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_user_login">UserLoginActivity</string>
     <string name="title_activity_user_regist">UserRegistActivity</string>
+    <string name="title_activity_hui_jia_meng">HuiJiaMengActivity</string>
+    <string name="detail"><font color="gray">项目简介：</font><font color="black">在Android项目开发中，经常会用到Toast这个控件，但是系统的默认式样太难看，有时需要改变一下，比如背景图片，还有上面的提示文字，有的时候还需要动态改变提示的文字，比如颜色之类的
+
+        还有一个问题，在一个TextView上面，怎样让它显示的内容有不同的颜色，比如“今天天气好吗？挺好的”，如果想让“今天今天好吗？”这一句显示红色，“挺好的”这三个字显示绿色呢？
+
+        下面就两个问题一并做解答，有图有真相</font></string>
 </resources>

@@ -54,6 +54,7 @@ public class MainActivity extends FragmentActivity {
 
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager(),
                 tabTitle);
+
         pager.setAdapter(adapter);
         tabLayout.setupWithViewPager(pager);
 
@@ -87,6 +88,10 @@ public class MainActivity extends FragmentActivity {
                         break;
                     case R.id.out:
                         intent = new Intent(MainActivity.this, UserRegistActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.fullmoney:
+                        intent=new Intent(MainActivity.this,HuiJiaMengActivity.class);
                         startActivity(intent);
                         break;
                 }

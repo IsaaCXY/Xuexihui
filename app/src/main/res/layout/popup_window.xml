@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="32sp">
+
+    <Button
+        android:id="@+id/pop_website"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_orange_dark"
+        android:padding="8sp"
+        android:text="访问网站"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/pop_call"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_orange_dark"
+        android:padding="8sp"
+        android:text="电话联系"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
