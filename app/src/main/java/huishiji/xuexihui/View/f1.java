@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import huishiji.xuexihui.R;
 
@@ -50,16 +48,10 @@ public class f1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_f1, container, false);
-        final TextView textView=(TextView)v.findViewById(R.id.fram1);
 
-        Button btn=(Button)v.findViewById(R.id.btn);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textView.setText("sdfdsfsd");
-                Toast.makeText(getActivity(),"111111",Toast.LENGTH_SHORT).show();
-            }
-        });
+
+        Button btn=(Button)v.findViewById(R.id.btn_CPH);
+
         return v;
     }
 

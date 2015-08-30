@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import huishiji.xuexihui.R;
 
@@ -45,11 +46,9 @@ import huishiji.xuexihui.R;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_f2, container, false);
-//        TextView textView=(TextView)v.findViewById(R.id.fram2);
-//        textView.setText("fram2");
-//        textView.setGravity(View.TEXT_ALIGNMENT_CENTER);
+//
+        Button button=(Button)v.findViewById(R.id.btn_XXH);
         return v;
     }
 

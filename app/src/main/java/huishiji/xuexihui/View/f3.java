@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import huishiji.xuexihui.R;
 
@@ -47,9 +48,7 @@ public class f3 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_f3, container, false);
-//        TextView textView=(TextView)v.findViewById(R.id.fram3);
-//        textView.setText("fram3");
-//        textView.setGravity(View.TEXT_ALIGNMENT_CENTER);
+        Button button=(Button)v.findViewById(R.id.btn_CZH);
         return v;
     }
 

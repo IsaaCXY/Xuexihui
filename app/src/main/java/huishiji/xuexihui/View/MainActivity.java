@@ -1,5 +1,6 @@
-package huishiji.xuexihui;
+package huishiji.xuexihui.View;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -12,14 +13,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import huishiji.xuexihui.Adapter.MyPagerAdapter;
+import huishiji.xuexihui.R;
+
 public class MainActivity extends FragmentActivity {
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
-    Toolbar toolbar;
-    ActionBarDrawerToggle mDrawerToggle;
-    TabLayout tabLayout;
-    ViewPager pager;
-    String[] tabTitle={"1","2","3"};
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private Toolbar toolbar;
+    public ActionBarDrawerToggle mDrawerToggle;
+    private TabLayout tabLayout;
+    private ViewPager pager;
+    private String[] tabTitle = {"测评汇", "学习汇", "成长汇", "社区汇"};
 //    List<Fragment>fragmentList=new ArrayList<>();
 //    f1 f1;
 //    f2 f2;
@@ -30,35 +33,29 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        fragmentList.add(0, f1);
-//        fragmentList.add(1, f2);
-//        fragmentList.add(2, f3);
 
         InitView();
         toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
         toolbar.setSubtitleTextColor(Color.parseColor("#BBDEFB"));
 
-        toolbar.setTitle("学习汇");
+        toolbar.setTitle("汇学习");
         toolbar.setSubtitle("测评汇");
         mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,
                 toolbar,
                 R.string.navigation_drawer_open,
-                R.string.navigation_drawer_close){
-        //TODO 加入一些滑动监听
+                R.string.navigation_drawer_close) {
+            //TODO 加入一些滑动监听
         };
 
         mDrawerToggle.syncState();
         drawerLayout.setDrawerListener(mDrawerToggle);
-//添加tab
-        tabLayout.addTab(tabLayout.newTab().setText("测评汇"));
-        tabLayout.addTab(tabLayout.newTab().setText("学习汇"));
-        tabLayout.addTab(tabLayout.newTab().setText("成长汇"));
+
         tabLayout.setTabMode(TabLayout.MODE_FIXED);//滑动模式
 
-        MyPagerAdapter adapter=new MyPagerAdapter(getSupportFragmentManager(),tabTitle);
+        MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager(),
+                tabTitle);
         pager.setAdapter(adapter);
         tabLayout.setupWithViewPager(pager);
-//        tabLayout.setTabsFromPagerAdapter(adapter);
 
 
 //TAB选择监听器
@@ -83,18 +80,19 @@ public class MainActivity extends FragmentActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
-                switch (menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
                     case R.id.login:
-                        drawerLayout.closeDrawer(navigationView);
+                        Intent intent = new Intent(MainActivity.this, UserLoginActivity.class);
+                        startActivity(intent);
                         break;
                     case R.id.out:
-                        drawerLayout.closeDrawer(navigationView);
+                        intent = new Intent(MainActivity.this, UserRegistActivity.class);
+                        startActivity(intent);
                         break;
                 }
                 return false;
             }
         });
-//        tabLayout.setupWithViewPager(pager);
     }
 
     //    @Override
@@ -123,7 +121,7 @@ public class MainActivity extends FragmentActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.left_navi);
         toolbar = (Toolbar) findViewById(R.id.toolB);
-        tabLayout=(TabLayout)findViewById(R.id.tabs);
-        pager=(ViewPager)findViewById(R.id.pager);
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        pager = (ViewPager) findViewById(R.id.pager);
     }
 }

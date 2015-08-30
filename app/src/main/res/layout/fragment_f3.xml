@@ -4,11 +4,12 @@
     android:layout_height="match_parent"
     tools:context="huishiji.xuexihui.View.f3">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/fram3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <Button
+        android:id="@+id/btn_CZH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="进入" />
+
 
 </FrameLayout>

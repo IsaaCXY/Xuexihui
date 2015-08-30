@@ -5,16 +5,22 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-   >
+    tools:context=".MainActivity">
 
     <include layout="@layout/container_main" />
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/left_navi"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/header_drawer"
-        app:menu="@menu/main" />
+        android:orientation="vertical">
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/left_navi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/header_drawer"
+            app:menu="@menu/main" />
+    </LinearLayout>
 </android.support.v4.widget.DrawerLayout>
