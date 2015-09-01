@@ -18,7 +18,8 @@ public class UserRegistActivity extends AppCompatActivity
         implements IUserRegisView {
     Toolbar toolbar;
     private Button btn_sub, btn_cancel;
-    private UserRegistPresenter userRegistPresenter = new UserRegistPresenter(this);
+    private UserRegistPresenter userRegistPresenter
+            = new UserRegistPresenter(this, this);
     private RadioGroup radioSex, radioRole;
     private TextInputLayout regName, regNick,
             regAge, regGrade, regClass, regPhone,
@@ -52,9 +53,9 @@ public class UserRegistActivity extends AppCompatActivity
                         qq = regQQ.getEditText().getText().length(),
                         pass = regPass.getEditText().getText().length();
 
-                if (nick == 0 && name == 0 && age == 0
-                        && grade == 0 && clas == 0 &&
-                        phone == 0 && qq == 0 && pass == 0) {
+                if (nick == 0 || name == 0 || age == 0
+                        || grade == 0 || clas == 0 ||
+                        phone == 0 || qq == 0 || pass == 0) {
                     Toast.makeText(UserRegistActivity.this, "每一个项目都要填满！",
                             Toast.LENGTH_SHORT).show();
                 } else {
@@ -97,7 +98,8 @@ public class UserRegistActivity extends AppCompatActivity
     @Override
     public void showSuccessfull() {
         this.finish();
-        Toast.makeText(this, "成功注册！", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, regNick.getEditText().getText().
+                toString() + "成功注册！", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -114,8 +116,7 @@ public class UserRegistActivity extends AppCompatActivity
     public String getRole() {
         RadioButton radioButton
                 = (RadioButton) findViewById(radioRole.getCheckedRadioButtonId());
-        String role = radioButton.getText().toString();
-        return role;
+        return radioButton.getText().toString();
     }
 
     @Override
@@ -132,8 +133,7 @@ public class UserRegistActivity extends AppCompatActivity
     public String getSex() {
         RadioButton radioButton
                 = (RadioButton) findViewById(radioSex.getCheckedRadioButtonId());
-        String sex = radioButton.getText().toString();
-        return sex;
+        return radioButton.getText().toString();
     }
 
     @Override

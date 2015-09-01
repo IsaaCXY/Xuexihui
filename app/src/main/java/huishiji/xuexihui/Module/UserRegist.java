@@ -1,5 +1,8 @@
 package huishiji.xuexihui.Module;
 
+import android.content.Context;
+import android.util.Log;
+
 import huishiji.xuexihui.DB.DAO;
 import huishiji.xuexihui.Imle.IUserRegist;
 import huishiji.xuexihui.Imle.OnRegistListener;
@@ -19,21 +22,29 @@ public class UserRegist implements IUserRegist {
                        int classNum,
                        String password,
                        String role,
-                       OnRegistListener onRegistListener) {
+                       OnRegistListener onRegistListener,
+                       Context context) {
 
 
         roleInt = TransRole(role);
         sexInt = TransSex(sex);
-        DAO dao = new DAO();
 
-        long l = dao.addData(nick, name, sexInt, age,
-                phonenumber, qq_number, gradeNum, classNum,
-                password, roleInt);
-        if (l >= 0) {
-            onRegistListener.RegistSuccessfully();
-        } else {
-            onRegistListener.RegistFailed();
+        DAO dao = new DAO(context);
+        try {
+            long l = dao.addData(nick, name, sexInt, age,
+                    phonenumber, qq_number, gradeNum, classNum,
+                    password, roleInt);
+            if (l >= 0) {
+                onRegistListener.RegistSuccessfully();
+            } else {
+                onRegistListener.RegistFailed();
+            }
+            System.out.println("现在有" + l + "条数据！");
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.w("数据库", "UserRegist发生错误！");
         }
+
     }
 
 //通过得到的字符串来生成身份的int值

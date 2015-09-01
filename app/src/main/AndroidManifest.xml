@@ -33,6 +33,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".View.UserLoginActivity" />
         </activity>
+        <activity
+            android:name=".View.HuiJiaMengActivity"
+            android:label="@string/title_activity_hui_jia_meng"
+            android:parentActivityName=".View.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="huishiji.xuexihui.View.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
