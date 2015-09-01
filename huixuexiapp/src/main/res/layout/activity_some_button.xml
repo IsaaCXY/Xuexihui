@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context="com.example.administrator.huixuexi.SomeTextViewActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+<TableLayout
+
+    android:background="#ffffff"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableRow
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:gravity="center_horizontal"
+
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <ImageView android:id="@+id/button_tuichu1"
+            android:layout_gravity="top"
+            android:src="@drawable/xiangxiadetuichu01"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+
+
+            android:gravity="center_horizontal"
+
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </TableRow>
+<TableRow
+
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView   android:id="@+id/btn1"
+        android:text="拍照"
+        android:onClick="clickBtn"
+        android:gravity="center_horizontal"
+        android:drawableTop="@drawable/camera"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView   android:id="@+id/btn2"
+        android:text="录音"
+        android:onClick="clickBtn"
+        android:gravity="center_horizontal"
+        android:drawableTop="@drawable/luyin"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+        />
+      <TextView   android:id="@+id/btn3"
+        android:text="荣誉记录"
+          android:onClick="clickBtn"
+        android:gravity="center_horizontal"
+        android:drawableTop="@drawable/jiangbei2"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    />
+</TableRow>
+    <TableRow>
+        <TextView   android:id="@+id/btn4"
+            android:text="相册导入"
+            android:onClick="clickBtn"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/photodaoru"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView   android:id="@+id/btn5"
+            android:text="文字随记"
+            android:onClick="clickBtn"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/wenzisuiji"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        />
+        <TextView   android:id="@+id/btn6"
+            android:onClick="clickBtn"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        />
+    </TableRow>
+</TableLayout>
+</RelativeLayout>

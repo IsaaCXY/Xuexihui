@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../MyApplication6.iml" filepath="$PROJECT_DIR$/../MyApplication6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../anysctask/anysctask.iml" filepath="$PROJECT_DIR$/../anysctask/anysctask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bundserviceapplication/bundserviceapplication.iml" filepath="$PROJECT_DIR$/../bundserviceapplication/bundserviceapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/huixuexiapp.iml" filepath="$PROJECT_DIR$/huixuexiapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../intentdserviceapplication/intentdserviceapplication.iml" filepath="$PROJECT_DIR$/../intentdserviceapplication/intentdserviceapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../learnaboutservice/learnaboutservice.iml" filepath="$PROJECT_DIR$/../learnaboutservice/learnaboutservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../monibofangyinyueservice/monibofangyinyueservice.iml" filepath="$PROJECT_DIR$/../monibofangyinyueservice/monibofangyinyueservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../serviceandbroadcastrecieverlearn1/serviceandbroadcastrecieverlearn1.iml" filepath="$PROJECT_DIR$/../serviceandbroadcastrecieverlearn1/serviceandbroadcastrecieverlearn1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tanchukuangtestapplication/tanchukuangtestapplication.iml" filepath="$PROJECT_DIR$/../tanchukuangtestapplication/tanchukuangtestapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../threadtest/threadtest.iml" filepath="$PROJECT_DIR$/../threadtest/threadtest.iml" />
+    </modules>
+  </component>
+</project>

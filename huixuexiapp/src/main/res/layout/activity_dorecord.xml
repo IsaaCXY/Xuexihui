@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.example.administrator.huixuexi.DORecordActivity">
+
+ <LinearLayout
+     android:paddingTop="10dp"
+     android:paddingBottom="10dp"
+     android:background="#6699ff"
+     android:orientation="horizontal"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+     <TextView  android:id="@+id/fanhui1"
+         android:text="返回"
+         android:textSize="20sp"
+         android:layout_weight="1"
+         android:gravity="center_vertical"
+         android:drawableLeft="@drawable/backtowd_hs"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content" />
+     <TextView android:id="@+id/title1"
+         android:text="secret"
+         android:textSize="20sp"
+         android:gravity="center"
+         android:layout_weight="1"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content" />
+     <TextView android:id="@+id/txt_baocun"
+         android:text="保存"
+         android:textSize="20sp"
+       android:layout_weight="1"
+         android:gravity="right"
+
+         android:paddingRight="10dp"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content" />
+ </LinearLayout>
+
+   <EditText android:id="@+id/secret_txt"
+       android:inputType="textMultiLine"
+       android:textSize="20sp"
+       android:layout_marginTop="5dp"
+       android:hint="  请输入文字"
+        android:gravity="start"
+       android:textStyle="normal"
+       android:paddingRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="200dp" />
+
+
+</LinearLayout>
