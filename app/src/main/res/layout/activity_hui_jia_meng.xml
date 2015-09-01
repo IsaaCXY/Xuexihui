@@ -1,18 +1,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="huishiji.xuexihui.View.HuiJiaMengActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolb_jiameng"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#2196F3"
-        android:elevation="4dp" />
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
     <Button
         android:id="@+id/btn_join"
         android:layout_width="match_parent"
@@ -21,9 +22,6 @@
         android:background="@android:color/holo_red_light"
         android:text="我要支持"
         android:textColor="@android:color/white" />
-<android.support.v4.widget.CircleImageView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
 
 
     <ScrollView
@@ -49,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16sp"
-                android:orientation="vertical"/>
+                android:orientation="vertical" />
         </LinearLayout>
     </ScrollView>
 
