@@ -5,8 +5,15 @@ import android.database.sqlite.SQLiteDatabase;
 
 /*数据库操作类*/
 public class DAO {
-    DatabaseHelper databaseHelper;
-    SQLiteDatabase db=databaseHelper.getWritableDatabase();
+SQLiteDatabase db;
+//    Context context;
+    public DAO(SQLiteDatabase db){
+        this.db=db;
+    }
+
+
+
+//    SQLiteDatabase db=databaseHelper.getWritableDatabase();
 
     public long addData(String nick,String name,int sex,int age,String phonenumber,
                         String qq_number,int gradeNum,int classNum,String password,

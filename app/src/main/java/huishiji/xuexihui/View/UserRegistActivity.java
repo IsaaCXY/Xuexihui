@@ -58,7 +58,7 @@ public class UserRegistActivity extends AppCompatActivity
                     Toast.makeText(UserRegistActivity.this, "每一个项目都要填满！",
                             Toast.LENGTH_SHORT).show();
                 } else {
-                    userRegistPresenter.regist();
+                    userRegistPresenter.regist(UserRegistActivity.this);
                 }
 
             }

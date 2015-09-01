@@ -1,5 +1,7 @@
 package huishiji.xuexihui.Presenter;
 
+import android.content.Context;
+
 import huishiji.xuexihui.Imle.IUserRegist;
 import huishiji.xuexihui.Imle.OnRegistListener;
 import huishiji.xuexihui.Module.UserRegist;
@@ -15,7 +17,7 @@ public class UserRegistPresenter {
         userRegist = new UserRegist();
     }
 
-    public void regist() {
+    public void regist(Context context) {
 
         userRegist.regist(userRegisView.getNickname(), userRegisView.getName(),
                 userRegisView.getSex(), userRegisView.getAge(), userRegisView.getPhoneNumber(),
@@ -31,6 +33,6 @@ public class UserRegistPresenter {
 
                         userRegisView.showFailedError();
                     }
-                });
+                },context);
     }
 }
