@@ -18,7 +18,8 @@ public class UserRegistActivity extends AppCompatActivity
         implements IUserRegisView {
     Toolbar toolbar;
     private Button btn_sub, btn_cancel;
-    private UserRegistPresenter userRegistPresenter = new UserRegistPresenter(this);
+    private UserRegistPresenter userRegistPresenter
+            = new UserRegistPresenter(this, this);
     private RadioGroup radioSex, radioRole;
     private TextInputLayout regName, regNick,
             regAge, regGrade, regClass, regPhone,
@@ -58,7 +59,7 @@ public class UserRegistActivity extends AppCompatActivity
                     Toast.makeText(UserRegistActivity.this, "每一个项目都要填满！",
                             Toast.LENGTH_SHORT).show();
                 } else {
-                    userRegistPresenter.regist(UserRegistActivity.this);
+                    userRegistPresenter.regist();
                 }
 
             }
@@ -97,7 +98,8 @@ public class UserRegistActivity extends AppCompatActivity
     @Override
     public void showSuccessfull() {
         this.finish();
-        Toast.makeText(this, "成功注册！", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, regNick.getEditText().getText().
+                toString() + "成功注册！", Toast.LENGTH_SHORT).show();
     }
 
     @Override

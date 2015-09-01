@@ -1,11 +1,9 @@
 package huishiji.xuexihui.Module;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import huishiji.xuexihui.DB.DAO;
-import huishiji.xuexihui.DB.DatabaseHelper;
 import huishiji.xuexihui.Imle.IUserRegist;
 import huishiji.xuexihui.Imle.OnRegistListener;
 
@@ -30,9 +28,8 @@ public class UserRegist implements IUserRegist {
 
         roleInt = TransRole(role);
         sexInt = TransSex(sex);
-        DatabaseHelper helper=new DatabaseHelper(context);
-        SQLiteDatabase db=helper.getWritableDatabase();
-        DAO dao = new DAO(db);
+
+        DAO dao = new DAO(context);
         try {
             long l = dao.addData(nick, name, sexInt, age,
                     phonenumber, qq_number, gradeNum, classNum,
@@ -42,6 +39,7 @@ public class UserRegist implements IUserRegist {
             } else {
                 onRegistListener.RegistFailed();
             }
+            System.out.println("现在有" + l + "条数据！");
         } catch (Exception e) {
             e.printStackTrace();
             Log.w("数据库", "UserRegist发生错误！");
